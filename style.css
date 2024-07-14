@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#form-container {
+  padding: 1px;
+}
+
+#mortgageForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+#mortgageForm label {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.half-spacing {
+  line-height: 0.5em;
+}
+
+.input-group {
+  flex-basis: calc(25% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.input-group.full-width {
+  flex-basis: 100%;
+}
+
+.input-group input[type="number"],
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#firstPaymentDate {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 4px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-basis: 100%;
+  }
+}
+
+#MortgageCalc {
+  text-align: center;
+}
+
+#chart3, #chart4, #chart5 {
+  margin-top: 20px;
+}
+
+#amortization-table-container {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+
+#amortization-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#amortization-table th, #amortization-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: right;
+}
+
+#amortization-table th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+#amortization-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#amortization-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+#clearDateBtn {
+  margin-left: 0px;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#clearDateBtn:hover {
+  background-color: #d32f2f;
+}  

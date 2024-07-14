@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Calculator</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 id="MortgageCalc">Mortgage Calculator</h2>
+  <div id="form-container">
+    <form id="mortgageForm">
+      <div class="input-group">
+        <label for="principal">Principal Amount:</label>
+        <input type="number" id="principal" value="938400" step="100">
+      </div>
+      <div class="input-group">
+        <label for="amortization">Amortization Period (Years):</label>
+        <input type="number" id="amortization" value="21.6" step="0.1" min="1" max="45">
+      </div>
+      <div class="input-group">
+        <label for="term">Term (Years):</label>
+        <input type="number" id="term" value="3" step="0.1" min="1" max="45">
+      </div>
+      <div class="input-group">
+        <label for="interestRate">Interest Rate:</label>
+        <input type="text" id="interestRate" value="2.62%">
+      </div>
+      <div class="input-group">
+        <label for="extraPayment">Extra Payment per Month:</label>
+        <input type="number" id="extraPayment" value="2000" step="100">
+      </div>
+      <div class="input-group">
+        <label for="firstPaymentDate">First Payment Date (Optional):</label>
+        <input type="date" id="firstPaymentDate">
+        <button type="button" id="clearDateBtn">Clear Date</button>
+      </div>
+      <div class="input-group-row">
+        <div class="input-group">
+          <label for="extraSavedTerm">Extra Saved for the Term:</label>
+          <input type="number" id="extraSavedTerm" value="0" disabled>
+        </div>
+        <div class="input-group">
+          <label for="extraSavedTotal">Extra Saved for the Total:</label>
+          <input type="number" id="extraSavedTotal" value="0" disabled>
+        </div>
+        <div class="input-group">
+          <label for="paidOffIn">Paid Off In # Payments:</label>
+          <input type="number" id="paidOffIn" value="0" disabled>
+        </div>
+        <div class="input-group">
+          <label for="outOf"># of Total Payments</label>
+          <input type="number" id="outOf" value="0" disabled>
+        </div>
+      </div>
+      <div class="input-group full-width">
+        <button type="submit">Calculate Mortgage</button>
+      </div>
+    </form>
+  </div>
+  <div id="chart"></div>
+  <div id="chart2"></div>
+  <div id="chart3"></div>
+  <div id="chart4"></div>
+  <div id="chart5"></div>
+  <div id="amortization-table-container">
+    <h3>Amortization Schedule</h3>
+    <table id="amortization-table">
+      <thead>
+        <tr>
+          <th>Payment # / Date</th>
+          <th>Payment Amount</th>
+          <th>Extra Payment</th>
+          <th>Principal Paid</th>
+          <th>Interest Paid</th>
+          <th>Remaining Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be inserted here by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <script src="mortgageCalculator.js"></script>
+</body>
+</html>
